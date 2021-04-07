@@ -1,0 +1,60 @@
+/* .form-box {
+} */
+.form-control {
+  /* border: 1px solid red; */
+  margin: 1rem 10rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.form-control .row {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-left: 255px;
+  margin-right: 299px;
+}
+
+.form-control .row label {
+  /* border: 1px solid red; */
+  margin-bottom: 0.5rem;
+  margin-right: 0;
+}
+
+.form-control input,
+.form-control textarea {
+  margin-left: 255px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 40%;
+  height: 2rem;
+  border-radius: 3px;
+  box-shadow: 2px 3px 3px 0px grey;
+  font: inherit;
+  border: 1px solid black;
+  background: #f8f8f8;
+  padding: 0.15rem 0.25rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+  background: #ebebeb;
+  border-color: #510077;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+  color: red;
+}
+
+.form-control--invalid p {
+  margin-left: 255px;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+  border-color: red;
+  background: #ffd1d1;
+}

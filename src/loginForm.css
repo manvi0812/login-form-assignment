@@ -1,0 +1,19 @@
+.form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.new-user {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+/* .sign-up {
+  margin-left: 407px;
+  display: flex;
+  width: 26rem;
+  border: 1px solid black;
+} */
