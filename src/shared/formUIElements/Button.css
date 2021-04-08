@@ -27,20 +27,6 @@
   margin-top: 4px;
   font-size: 15px;
 }
-.reset-options {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 5rem;
-  margin-left: 244px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #5267ff;
-  padding: 0 0px;
-  /* width: 83%;
-  text-align: end; */
-}
 
 .button:focus {
   outline: none;
