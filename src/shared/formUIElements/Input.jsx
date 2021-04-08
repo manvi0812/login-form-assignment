@@ -2,7 +2,6 @@ import React, { useReducer, useEffect } from "react";
 import "./Input.css";
 
 import { validate } from "../util/validators";
-import Button from "./Button";
 // there are third parties like  "formic" which you can use in React to get form functionality for free.
 
 const inputReducer = (state, action) => {
@@ -19,7 +18,11 @@ const inputReducer = (state, action) => {
         isTouched: true,
       };
     }
-
+    case "RESET": {
+      return {
+        value: "",
+      };
+    }
     default:
       return state;
   }
@@ -54,6 +57,14 @@ const Input = (props) => {
     });
   };
 
+  const resetHandler = (e) => {
+    e.preventDefault();
+    // console.log(inputState.value);
+    dispatch({
+      type: "RESET",
+    });
+  };
+
   const element =
     props.element === "input" ? (
       <input
@@ -63,7 +74,6 @@ const Input = (props) => {
         onChange={changeHandler}
         onBlur={touchHandler}
         value={inputState.value} // bind the value prop to inputState.value so we have 2-way binding again.
-        // onInvalid={invalidHandler}
       />
     ) : (
       <textarea
@@ -81,7 +91,9 @@ const Input = (props) => {
       }`}>
       <div className='row'>
         <label htmlFor={props.id}>{props.label}</label>
-        <Button val={props.retrieve} />
+        <button onClick={resetHandler} className='reset-options'>
+          {props.retrieve}
+        </button>
       </div>
       {element}
       {!inputState.isValid && inputState.isTouched && <p>{props.errorText}</p>}
