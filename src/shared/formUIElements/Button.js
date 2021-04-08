@@ -5,12 +5,7 @@ import "./Button.css";
 
 const Button = (props) => {
   if (props.val) {
-    return (
-      <button
-        className={props.val === "Sign-up" ? "sign-up" : "reset-options"}>
-        {props.val}
-      </button>
-    );
+    return <button className={"sign-up"}>{props.val}</button>;
   }
 
   if (props.href) {
