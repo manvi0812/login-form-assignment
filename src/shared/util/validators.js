@@ -41,8 +41,7 @@ export const validate = (value, validators) => {
       isValid = isValid && +value <= validator.val;
     }
     if (validator.type === VALIDATOR_TYPE_EMAIL) {
-      isValid =
-        isValid && /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{3,32}$/.test(value);
+      isValid = isValid && /^([a-zA-Z0-9_-]){3,32}$/.test(value);
     }
     if (validator.type === VALIDATOR_TYPE_PASSWORD) {
       isValid =
