@@ -1,5 +1,6 @@
 /* .form-box {
 } */
+
 .form-control {
   /* border: 1px solid red; */
   margin: 1rem 10rem;
@@ -57,4 +58,19 @@
 .form-control--invalid textarea {
   border-color: red;
   background: #ffd1d1;
+}
+
+.reset-options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 5rem;
+  margin-left: 244px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5267ff;
+  padding: 0 0px;
+  /* width: 83%;
+  text-align: end; */
 }
